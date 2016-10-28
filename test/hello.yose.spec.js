@@ -29,5 +29,22 @@ describe('Passing the hello yose level:', function() {
             done(); 
         });
     });
+
+
+    //tambahan mendapatkan file header dengan a#contact-me-link
+    it('contain element a#contact-me-link',function(done){
+        request('http://localhost:7000/', function(error,response, body){
+            expect(body).to.contain('<a id="contact-me-link"');
+            done();
+        })
+    })
+
+    //tambahan mendapatkan file header dengan a#contact-me-link
+    it('contain element a#ping-challenge-link',function(done){
+        request('http://localhost:7000/', function(error,response, body){
+            expect(body).to.contain('<a id="ping-challenge-link"');
+            done();
+        })
+    })
    
 });
