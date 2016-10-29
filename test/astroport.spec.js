@@ -23,5 +23,15 @@ describe('Passing the astroport level:', function() {
             done();
         })
     })
-   
+
+   //tambahan mendapatkan file header dengan a#contact-me-link
+    it('contain element input #ship and button #dock',function(done){
+        request('http://localhost:7000/astroport', function(error,response, body){
+            //expect(document.getElementById("ship")).to.equal('ship');
+            expect(body).to.contain('<button id="dock"');
+            expect(body).to.contain('id="ship"');
+            done();
+        })
+    })
+    
 });
