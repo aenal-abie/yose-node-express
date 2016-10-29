@@ -8,7 +8,7 @@ primeFactorsOf = function(number) {
 		}
 		fac++;
 	}
-	return JSON.stringify(factors);
+	return factors;
 };
 
 module.exports = primeFactorsOf;
